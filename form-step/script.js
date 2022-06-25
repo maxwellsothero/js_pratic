@@ -30,7 +30,7 @@ function alterarNome(){
 function alterarEmail(){
     MSG_ERRO.innerHTML='';
     INPUT_EMAIL.classList.remove('is-invalid');
-
+    
     if(INPUT_EMAIL.value.length >= 3){
         INPUT_EMAIL.classList.add('is-valid');
     }
@@ -60,10 +60,10 @@ function atualizarProgresso(){
         fechartela1.style.display = "none";
         fechartela2.style.display = "none";
         fechartela3.style.display = "block";
-        BTN_AVANCAR.innerHTML='Confirmar';
+        document.getElementById('form3').innerHTML =  'Email: '+INPUT_EMAIL.value+ '<br>'+ 'Nome: '+INPUT_NOME.value;
+        BTN_AVANCAR.innerHTML='Confirmar';a
     }
-    }
-
+}
 /* ----------------botão avançar---------------- ,*/
 function  avancar(){    
     if(validarForm1() === false ){
@@ -78,7 +78,6 @@ function  avancar(){
         passoAtual += 1;
         atualizarProgresso();   
     }
-
 /* ----------------botão volta------------------- */
 function  voltar(){
     if(passoAtual === 1){        
@@ -87,9 +86,7 @@ function  voltar(){
         passoAtual -= 1;
         atualizarProgresso();
     }
-
 /* ------------VALIDAR FORM1------------------- */
-
 function validarForm1(){
     let estaValido = true;
 
@@ -118,13 +115,13 @@ function validarForm1(){
 
     if(INPUT_SENHA.value ===''){
         INPUT_SENHA.classList.add('is-invalid');
-        INPUT_SENHA.innerHTML = 'Senha Não pode ser Vazia'
+        INPUT_SENHA.innerHTML = 'Senha Não pode ser Vazia';
         estaValido = false;
     }
     if(INPUT_SENHA.value !== INPUT_CONFIRMAR_SENHA.value){
         INPUT_CONFIRMAR_SENHA.classList.add('is-invalid');
-        INPUT_CONFIRMAR_SENHA.innerHTML ='Senhas Não Conhecidem'
+        INPUT_CONFIRMAR_SENHA.innerHTML ='Senhas Não Conhecidem';
         estaValido = false;
     }
-    return estaValido
-    }
+    return estaValido;
+}
