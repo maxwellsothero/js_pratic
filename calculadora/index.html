@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>calculadora</title>
+</head>
+<body class="container">
+    <h1 class="mt-5">calculadora</h1>
+    <hr>
+
+        <section class="row mt-5">
+            <div class="col-md-4 offset-4">
+                <article class="card card-body bg-dark">
+                    <p id="visor" class="text-white fs-1 text-end">0</p>
+                       
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <button onclick="selecionarDigito(7)" class="btn btn-dark border-white w-100">7</button>
+                                </td>
+                                <td >
+                                    <button onclick="selecionarDigito(8)" class="btn btn-dark border-white w-100">8</button>
+                                </td>
+                                <td >
+                                    <button onclick="selecionarDigito(9)" class="btn btn-dark border-white w-100">9</button>
+                                </td>
+                                <td >
+                                    <button class="btn btn-dark border-white w-100">/</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button onclick="selecionarDigito(4)" class="btn btn-dark border-white w-100">4</button>
+                                </td>
+                                <td >
+                                    <button onclick="selecionarDigito(5)" class="btn btn-dark border-white w-100">5</button>
+                                </td>
+                                <td >
+                                    <button onclick="selecionarDigito(6)" class="btn btn-dark border-white w-100">6</button>
+                                </td>
+                                <td >
+                                    <button class="btn btn-dark border-white w-100">*</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button onclick="selecionarDigito(1)" class="btn btn-dark border-white w-100">1</button>
+                                </td>
+                                <td >
+                                    <button onclick="selecionarDigito(2)" class="btn btn-dark border-white w-100">2</button>
+                                </td>
+                                <td >
+                                    <button onclick="selecionarDigito(3)" class="btn btn-dark border-white w-100">3</button>
+                                </td>
+                                <td >
+                                    <button class="btn btn-dark border-white w-100">-</button>
+                                </td>
+                            </tr>
+                            <td>
+                                <button onclick="selecionarDigito(0)" class="btn btn-dark border-white w-100">0</button>
+                            </td>
+                            <td colspan="2" >
+                                <button class="btn btn-dark border-white w-100">=</button>
+                            </td>
+                            <td >
+                                <button onclick="somar()" class="btn btn-dark border-white w-100">+</button>
+                            </td>
+                        
+
+                        </table>
+
+
+                  
+                </article>
+
+            </div>
+        </section>
+     <script src="script.js"></script>
+</body>
+</html>

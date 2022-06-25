@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br
+">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+
+<link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <title>Pagina de cadastro1</title>
+</head>
+<body class="container" style="background-color: #ccc ;">
+    <section class="row mt-5">
+
+        <div class="col-md-6 offset-3">
+            <article class="card card-body">
+                <h2 class="text-center">Cadastro de usuário</h2>
+                <hr>
+                    <p id="progresso" class="text-center">
+                        1/3
+                    </p>
+                    <form id="form1" action="" >
+                        <label for="nome">Nome</label>
+                        <input id="nome" type="text" class="form-control mb=3">
+
+                        <label for="email">Email</label>
+                        <input id="email" type="email" class="form-control mb=3">
+                    </form>
+
+                    <form id="form2" action="" style="display: none;">
+                        <label for="senha">Senha</label>
+                        <input id="senha" type="password" class="form-control mb=3">
+
+                        <label for="confirmar_senha">Confime sua Senha</label>
+                        <input id="confirmar_senha" type="password" class="form-control mb=3">
+                    </form>
+                    
+                    <div id="form3" class="alert alert-sucess" style="display: none;">
+                        <strong>PRONTO</strong>
+                        <P>Confirme seu cadastro"</P>
+
+                    </div>
+
+                    <div style="display: flex; justify-content:space-between; margin-top: 10px;">
+                        <button onclick="voltar()" id="voltar" class="btn btn-outline-dark" style="display: none;">Voltar</button>
+                        <button onclick="avancar()" id="avancar" class="btn btn-primary">Avançar</button>
+                      
+                    </div>
+                
+            </article>
+
+        </div>
+    </section>
+     
+
+
+
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>

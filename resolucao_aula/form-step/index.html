@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        
+        <link rel="stylesheet" href="bootstrap.css">
+    </head>
+    <body class="container" style="background-color: #CECECE;">
+        <section class="row mt-5">
+            <div class="col-md-6 offset-3">
+                <article class="card card-body">
+                    <h2 class="text-center">Cadastro de Usuário</h2>
+                    <hr>
+                    <p class="text-center" id="progresso">
+                        1/3
+                    </p>
+
+                    <p id="msg-erro" class="text-danger text-center">
+                        
+                    </p>
+
+                    <form id="step-1" action="">
+                        <label for="nome">Nome</label>
+                        <input onkeyup="alterarNome()" id="nome" type="text" class="form-control mb-3">
+
+                        <label for="email">Email</label>
+                        <input onkeyup="alterarEmail()" id="email" type="text" class="form-control mb-3">
+                    </form>
+
+                    <form id="step-2" action="" style="display: none;">
+                        <label for="senha">Senha</label>
+                        <input id="senha" type="password" class="form-control mb-3">
+
+                        <label for="confirm_senha">Confirmação de Senha</label>
+                        <input id="confirm_senha" type="password" class="form-control mb-3">
+                    </form>
+
+                    <div id="step-3" class="alert alert-success" style="display: none;">
+                        <strong>PRONTO!</strong>
+                        <p>Confirme seu cadastro</p>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <button onclick="voltar()" id="voltar" class="btn btn-outline-dark" disabled>Voltar</button>
+                        <button onclick="avancar()" id="avancar" class="btn btn-primary">Avançar</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+</html>
