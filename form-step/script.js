@@ -9,11 +9,32 @@ let fechartela3 =document.querySelector('#form3');
 /* ---------------VARIAVEIS PARA VERIFICAÇÃO---------- */
 const INPUT_NOME = document.getElementById('nome');
 const INPUT_EMAIL = document.getElementById('email');
-
 const INPUT_SENHA = document.getElementById('senha');
 const INPUT_CONFIRMAR_SENHA = document.getElementById('confirmar_senha');
 
+const MSG_ERRO = document.getElementById('msg-erro')
+
 let passoAtual =1;
+
+function alterarNome(){
+    MSG_ERRO.innerHTML= '';
+    INPUT_NOME.classList.remove('is-invalid');
+
+    INPUT_NOME.value = INPUT_NOME.value.toUpperCase();
+
+    if(INPUT_NOME.value.length >= 3){
+        INPUT_NOME.classList.add('is-valid');
+    }
+}
+
+function alterarEmail(){
+    MSG_ERRO.innerHTML='';
+    INPUT_EMAIL.classList.remove('is-invalid');
+
+    if(INPUT_EMAIL.value.length >= 3){
+        INPUT_EMAIL.classList.add('is-valid');
+    }
+}
 
 function atualizarProgresso(){
     PROGRESSO.innerHTML = passoAtual + "/3";
@@ -73,11 +94,15 @@ function validarForm1(){
     let estaValido = true;
 
     if(INPUT_NOME.value === ''){
-        alert('Digite pelos menos 1 nome');
+        /* alert('Digite pelos menos 1 nome'); */
+        INPUT_NOME.classList.add('is-invalid');
+        MSG_ERRO.innerHTML = 'Nome esta Invalido';
         estaValido = false;        
     }
     if( INPUT_EMAIL.value === ''){
-        alert('DIGITE SEU EMAIL');
+        INPUT_EMAIL.classList.add('is-invalid');
+        MSG_ERRO.innerHTML = "Email esta Invalido";
+        /* alert('DIGITE SEU EMAIL'); */
         estaValido = false;       
     }
     return estaValido;
@@ -92,11 +117,13 @@ function validarForm1(){
         let estaValido = true;
 
     if(INPUT_SENHA.value ===''){
-        alert('Senha Invalida');
+        INPUT_SENHA.classList.add('is-invalid');
+        INPUT_SENHA.innerHTML = 'Senha Não pode ser Vazia'
         estaValido = false;
     }
     if(INPUT_SENHA.value !== INPUT_CONFIRMAR_SENHA.value){
-        alert(' as senhas não conhecidem !!!');
+        INPUT_CONFIRMAR_SENHA.classList.add('is-invalid');
+        INPUT_CONFIRMAR_SENHA.innerHTML ='Senhas Não Conhecidem'
         estaValido = false;
     }
     return estaValido

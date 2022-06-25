@@ -17,15 +17,16 @@
             <article class="card card-body">
                 <h2 class="text-center">Cadastro de usuário</h2>
                 <hr>
-                    <p id="progresso" class="text-center">
-                        1/3
+                    <p id="progresso" class="text-center">1/3</p>
+                    <p id="msg-erro" class="text-danger text-center">
+
                     </p>
                     <form id="form1" action="" >
                         <label for="nome">Nome</label>
-                        <input id="nome" type="text" class="form-control mb=3">
+                        <input onkeyup="alterarNome()" id="nome" type="text" class="form-control mb=3">
 
                         <label for="email">Email</label>
-                        <input id="email" type="email" class="form-control mb=3">
+                        <input onkeyup="alterarEmail()" id="email" type="email" class="form-control mb=3">
                     </form>
 
                     <form id="form2" action="" style="display: none;">
