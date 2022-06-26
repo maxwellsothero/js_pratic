@@ -8,67 +8,81 @@
     <title>calculadora</title>
 </head>
 <body class="container">
-    <h1 class="mt-5">calculadora</h1>
+    <h1 class="mt-5 text-center">calculadora</h1>
     <hr>
 
         <section class="row mt-5">
             <div class="col-md-4 offset-4">
-                <article class="card card-body bg-dark">
+                <article class="card card-body bg-secondary">
                     <p id="visor" class="text-white fs-1 text-end">0</p>
                        
                         <table class="table">
                             <tr>
                                 <td>
-                                    <button onclick="selecionarDigito(7)" class="btn btn-dark border-white w-100">7</button>
+                                    <button onclick="selecionarDigito(7)" class="btn btn-outline-light  w-100">7</button>
                                 </td>
                                 <td >
-                                    <button onclick="selecionarDigito(8)" class="btn btn-dark border-white w-100">8</button>
+                                    <button onclick="selecionarDigito(8)" class="btn btn-outline-light  w-100">8</button>
                                 </td>
                                 <td >
-                                    <button onclick="selecionarDigito(9)" class="btn btn-dark border-white w-100">9</button>
+                                    <button onclick="selecionarDigito(9)" class="btn btn-outline-light w-100">9</button>
                                 </td>
                                 <td >
-                                    <button class="btn btn-dark border-white w-100">/</button>
+                                    <button onclick="dividir()" class="btn btn-outline-light w-100">/</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <button onclick="selecionarDigito(4)" class="btn btn-dark border-white w-100">4</button>
+                                    <button onclick="selecionarDigito(4)" class="btn btn-outline-light w-100">4</button>
                                 </td>
                                 <td >
-                                    <button onclick="selecionarDigito(5)" class="btn btn-dark border-white w-100">5</button>
+                                    <button onclick="selecionarDigito(5)" class="btn btn-outline-light w-100">5</button>
                                 </td>
                                 <td >
-                                    <button onclick="selecionarDigito(6)" class="btn btn-dark border-white w-100">6</button>
+                                    <button onclick="selecionarDigito(6)" class="btn btn-outline-light w-100">6</button>
                                 </td>
                                 <td >
-                                    <button class="btn btn-dark border-white w-100">*</button>
+                                    <button onclick="multiplicar()" class="btn btn-outline-light w-100">*</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <button onclick="selecionarDigito(1)" class="btn btn-dark border-white w-100">1</button>
+                                    <button onclick="selecionarDigito(1)" class="btn btn-outline-light w-100">1</button>
                                 </td>
                                 <td >
-                                    <button onclick="selecionarDigito(2)" class="btn btn-dark border-white w-100">2</button>
+                                    <button onclick="selecionarDigito(2)" class="btn btn-outline-light w-100">2</button>
                                 </td>
                                 <td >
-                                    <button onclick="selecionarDigito(3)" class="btn btn-dark border-white w-100">3</button>
+                                    <button onclick="selecionarDigito(3)" class="btn btn-outline-light w-100">3</button>
                                 </td>
                                 <td >
-                                    <button class="btn btn-dark border-white w-100">-</button>
+                                    <button onclick="subtrair()" class="btn btn-outline-light w-100">-</button>
                                 </td>
                             </tr>
                             <td>
-                                <button onclick="selecionarDigito(0)" class="btn btn-dark border-white w-100">0</button>
+                                <button onclick="selecionarDigito(0)" class="btn btn-outline-light w-100">0</button>
                             </td>
                             <td colspan="2" >
-                                <button class="btn btn-dark border-white w-100">=</button>
+                                <button onclick="resultado()" class="btn btn-outline-light w-100">=</button>
                             </td>
                             <td >
-                                <button onclick="somar()" class="btn btn-dark border-white w-100">+</button>
+                                <button onclick="somar()" class="btn btn-outline-light w-100">+</button>
                             </td>
-                        
+                            
+                           <tr>
+                            <td>
+                                <button onclick="writeMemory()" class="btn btn-outline-light w-100 ">MR</button>
+                            </td>
+                            <td>
+                                <button onclick="enviaMemoria()" class="btn btn-outline-light w-100">M</button>
+                            </td>
+                            <td  >
+                                <button onclick="selecionarDigito('.')" class="btn btn-outline-light w-100">.</button>
+                            </td>
+                            <td >
+                                <button onclick="limpar()" class="btn btn-outline-light w-100">CLR</button>
+                            </td>
+                           </tr>
 
                         </table>
 

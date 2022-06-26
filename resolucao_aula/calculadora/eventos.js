@@ -24,3 +24,4 @@ function selecionarDigito(numero) {
 
     VISOR.innerHTML += numero;
 }
+
