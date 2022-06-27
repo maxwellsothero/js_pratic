@@ -1,25 +1,21 @@
 const VISOR =document.getElementById('visor');
-
 let memoriaAuxiliar = 0;
 let operacao = false;
 let opeVar = '';
-
 let gravaMemoria = '';
 
 function selecionarDigito(numero){
     if(parseFloat(VISOR.innerHTML)=== 0 ){
         VISOR.innerHTML = '';
-    }
+    }    
     if(operacao === true){
         operacao = false;
         VISOR.innerHTML = '';
-    }
-    
+    }           
     VISOR.innerHTML += numero;
 }
 function resultado(){
-   //VISOR.innerHTML = memoriaAuxiliar + parseInt(VISOR.innerHTML);
-   if(opeVar === '+'){
+         if(opeVar === '+'){
         VISOR.innerHTML = memoriaAuxiliar + parseFloat(VISOR.innerHTML);
    }else if(opeVar ==='-'){
         VISOR.innerHTML = memoriaAuxiliar - parseFloat(VISOR.innerHTML);
@@ -34,21 +30,20 @@ function resultado(){
 }
 function somar(){
     opeVar = '+';
-    if( memoriaAuxiliar !== 0){
-        VISOR.innerHTML = memoriaAuxiliar + parseFloat(VISOR.innerHTML);
-    }
+         if( memoriaAuxiliar !== 0){
+            VISOR.innerHTML = memoriaAuxiliar + parseFloat(VISOR.innerHTML);
+      }
     operacao = true;
     memoriaAuxiliar = parseFloat(VISOR.innerHTML); 
 }
 function subtrair(){
-    opeVar = '-'
-    if (memoriaAuxiliar !== 0) {   
-             
-        VISOR.innerHTML = memoriaAuxiliar - parseFloat(VISOR.innerHTML);                  
+    opeVar = '-';
+            if (memoriaAuxiliar !== 0) {  
+            VISOR.innerHTML = memoriaAuxiliar - parseFloat(VISOR.innerHTML);                  
     }
     operacao = true;
     memoriaAuxiliar = parseFloat(VISOR.innerHTML);
-   }
+}
 function multiplicar(){
     opeVar = '*'
     if (memoriaAuxiliar !== 0) {   
@@ -60,8 +55,7 @@ function multiplicar(){
 }
 function dividir(){
     opeVar = '/'
-    if (memoriaAuxiliar !== 0) {   
-             
+    if (memoriaAuxiliar !== 0) {                
         VISOR.innerHTML = memoriaAuxiliar / parseFloat(VISOR.innerHTML);                  
     }
     operacao = true;
@@ -73,7 +67,6 @@ function limpar(){
     operacao = false;
     opeVar = '';
 }
-
 function writeMemory(){
     if(gravaMemoria !== 0){
         gravaMemoria = VISOR.innerHTML;
